@@ -35,13 +35,13 @@
             </thead>
 
             <tbody>
-                <% for (int i = 0; i < data.length; i++) { %>
+                <% for (var i = 0; i < data.length; i++) { %>
                 <tr>
-                    <td>data[i].issuer</td>
-                    <td>data[i].grade</td>
-                    <td>data[i].maturity_date</td>
-                    <td>data[i].coupon</td>
-                    <td>data[i].predictive_accuracy</td>
+                    <td><%= data[i].issuer %></td>
+                    <td><%= data[i].grade %></td>
+                    <td><%= data[i].maturity_date %></td>
+                    <td><%= data[i].coupon %></td>
+                    <td><%= data[i].predictive_accuracy %></td>
                 </tr>
                 <% } %>
             </tbody>
