@@ -29,8 +29,8 @@
                     <th style="width: 30%" scope="col">Issuer</th>
                     <th style="width: 15%" scope="col">Grade</th>
                     <th style="width: 15%" scope="col">Maturity Date</th>
-                    <th style="width: 20%" scope="col">Coupon</th>
-                    <th style="width: 20%" scope="col">Predictive Accuracy</th>
+                    <th style="width: 20%" scope="col">Coupon Rate</th>
+                    <th style="width: 20%" scope="col">Credit Rating Agency</th>
                 </tr>
             </thead>
 
@@ -40,8 +40,8 @@
                     <td><%= data[i].issuer %></td>
                     <td><%= data[i].grade %></td>
                     <td><%= data[i].maturity_date %></td>
-                    <td><%= data[i].coupon %></td>
-                    <td><%= data[i].predictive_accuracy %></td>
+                    <td><%= data[i].coupon %>%</td>
+                    <td><%= data[i].agency %></td>
                 </tr>
                 <% } %>
             </tbody>
