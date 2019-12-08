@@ -4,10 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+/* --- use dotenv to load database --- */
+require("dotenv").config({ path: __dirname + "/.env" });
+
 //create router
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var investorsRouter = require('./routes/investors');
+var requestRouter = require('./routes/request');
 var entertainentRouter = require('./routes/sportsandentertainment');
 var ygRouter = require('./routes/ygentertainment')
 
@@ -27,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/investors', investorsRouter);
+app.use('/request', requestRouter);
 app.use('/sportsandentertainment',entertainentRouter);
 app.use('/ygentertainment',ygRouter)
 
