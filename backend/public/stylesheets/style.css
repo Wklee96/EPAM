@@ -4,3 +4,11 @@ body {
   background-color: rgb(233, 233, 233);
 }
 
+td {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+p { word-break: break-all }
