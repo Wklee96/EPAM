@@ -6,9 +6,9 @@ const { Pool } = require("pg");
 const pool = new Pool({
   user: "postgres",
   host: "localhost",
-  database: "epam",
-  password: "postgres",
-  port: 5433
+  database: "postgres",
+  password: "w2001218",
+  port: 5432
 });
 
 var insert_bond = sqlQueries.queries.insert_bond;
@@ -39,7 +39,8 @@ router.post('/', function(req, res, next) {
   var agency = agencies[getRandomInt(0,3)];
   pool.query(insert_bond, [req.body.issuer, finalRating, req.body.maturity_date, coupon, agency, 'bank'], function(err, data) {
     if (err) {
-      res.status(404).send();
+      //res.status(404).send();
+      console.log(err)
     } else {
       setTimeout(() => {
         res.redirect("investors/bank");

@@ -6,9 +6,9 @@ const { Pool } = require("pg");
 const pool = new Pool({
   user: "postgres",
   host: "localhost",
-  database: "epam",
-  password: "postgres",
-  port: 5433
+  database: "postgres",
+  password: "w2001218",
+  port: 5432
 });
 
 var get_bond_type = sqlQueries.queries.get_bond_type;

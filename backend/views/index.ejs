@@ -1,8 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
 
+  <style>
+    .h{
+      text-align: center;
+    }
+    .p{
+      text-indent:2em;
+    }
+    .button {
+      background-color: #e7e7e7; color: black;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 8px;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+    }
+    .button:hover {
+    background-color: #555555; /* Green */
+    color: white;
+}
+    </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -51,7 +78,8 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">A blockchain-based credit-rating platform for your needs</h1>
+          <!--<h1 class="mb-5">A blockchain-based credit-rating platform for your needs</h1>-->
+          <h1 class="mb-5">Based on block chain proof, federal learning campus loan platform</h1>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
          
@@ -69,9 +97,17 @@
             <div class="features-icons-icon d-flex">
               <img src="/img/company.png" class="card-img-top" alt="company">
             </div>
-            <h3>Company</h3>
-            <p class="lead mb-0">Looking for a credit-rating</p>
-            <a href="/request">Click here</a>
+            <h3>Loan Company</h3>
+            <p class="lead mb-0">Looking for transaction data</p>
+            <!-- <button  class = 'button'><a href="/investors">Click here</a></button> -->
+            <script>
+                  function jump(){
+                      window.location.href="/request";
+                  }
+              </script>
+               
+            <input type="button" value="Look over" onclick=javascrtpt:jump() class="button">
+            <!-- <a href="/request">Click here</a> -->
           </div>
         </div>
         
@@ -80,9 +116,21 @@
             <div class="features-icons-icon d-flex">
               <img src="/img/investor.png" class="card-img-top" alt="investor">
             </div>
-            <h3>Investor</h3>
-            <p class="lead mb-0">Looking for a company to invest in?</p>
-            <a href="/investors">Click here</a>
+            <h3>Lender</h3>
+            <p class="lead mb-0">Looking for a company to loan in?</p>
+            <script>
+                  function jump1(){
+                      window.location.href="/investors";
+                  }
+                  function jump2(){
+                      window.location.href="/request";
+                  }
+              </script>
+               
+            <input type="button" value="Look over" onclick=javascrtpt:jump1() class="button" class="button">
+            <input type="button" value="   Loan  " onclick=javascrtpt:jump2() class="button" class="button">
+            <!-- <button  class = 'button'><a href="/investors">Click here</a></button> -->
+            <!-- <a href="/investors">Click here</a> -->
           </div>
         </div>
         
@@ -98,24 +146,24 @@
         <div class="col-lg-6 order-lg-2 text-white showcase-img"
           style="background-image: url('/img/security-lock2.jpg');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Secure and Trustworthy</h2>
-          <p class="lead mb-0">When you use "James Bond", you will know that your money is safe with the best bonds-selling platform in the world, partnering with top credit-rating agencies around the world</p>
+          <h2 class="h">Secure and Trustworthy</h2>
+          <div class="p"><p class="lead mb-0" class="p1">"When you use "James Bond", you will know that your money is safe with the best bonds-selling platform in the world, partnering with top credit-rating agencies around the world  "</p></div>
         </div>
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6 text-white showcase-img" 
         style="background-image: url('/img/awards.jpg');"></div>
         <div class="col-lg-6 my-auto showcase-text">
-          <h2>High accredition</h2>
-          <p class="lead mb-0">Getting a "James Bond" credit-rating is like getting a stamp of approval from the biggest credit-rating agencies around the world</p>
+          <h2 class="h">High accredition</h2>
+          <div class="p"><p class="lead mb-0" class="p">"Getting a "James Bond" credit-rating is like getting a stamp of approval from the biggest credit-rating agencies around the world " </p></div>
         </div>
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6 order-lg-2 text-white showcase-img"
           style="background-image: url('/img/bg-showcase-3.jpg');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Easy to Use &amp; Intuitive</h2>
-          <p class="lead mb-0">With a highly UI, this platform is easy for any beginner investors or companies to start with</p>
+          <h2 class="h">Easy to Use &amp; Intuitive</h2>
+          <div class="p"><p class="lead mb-0" class="p">"With a highly UI, this platform is easy for any beginner investors or companies to start with "</p></div>
         </div>
       </div>
     </div>
@@ -130,21 +178,21 @@
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="/img/testimonials-1.jpg" alt="">
             <h5>Margaret E.</h5>
-            <p class="font-weight-light mb-0">"James Bond is fantastic! It is so easy to use and secure that I don't have to worry about my investments."</p>
+            <p class="font-weight-light mb-0" class="p">"James Bond is fantastic! It is so easy to use and secure that I don't have to worry about my investments."</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="/img/testimonials-2.jpg" alt="">
             <h5>Fred S.</h5>
-            <p class="font-weight-light mb-0">"I've been using James Bond for many years now for my company, and it always gives the most accurate credit-rating!"</p>
+            <p class="font-weight-light mb-0" class="p">  "I've been using James Bond for many years now for my company, and it always gives the most accurate credit-rating!"</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="/img/testimonials-3.jpg" alt="">
             <h5>Sarah W.</h5>
-            <p class="font-weight-light mb-0">"Thank you James Bond for helping us to find the right company to invest in!"</p>
+            <p class="font-weight-light mb-0" class="p">"Thank you James Bond for helping us to find the right company to invest in!"</p>
           </div>
         </div>
       </div>
@@ -197,6 +245,7 @@
               <a href="#">Privacy Policy</a>
             </li>
           </ul>
+          <
           <p class="text-muted small mb-4 mb-lg-0">&copy; James Bond 2019. All Rights Reserved.</p>
         </div>
         <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
