@@ -14,13 +14,17 @@ const pool = new Pool({
 var insert_bond = sqlQueries.queries.insert_bond;
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router
+.get('/', function(req, res, next) {
+  console.log(1);
   res.render("request");
-});
-
-router.post('/', function(req, res, next) {
-  var ratings = ['AAA', 'AA', 'A', 'BBB', 'BB', 'B', 'CCC', 'CC', 'C'];
+})
+.post('/', function(req, res, next) {//没有捕捉到对象
+  console.log(1);
+  console.log(req.body);
+  var ratings = ['A', 'A', 'A', 'B', 'B', 'B', 'A', 'B', 'A'];
   var coupon = Number(req.body.coupon);
+  console.log(coupon);
   var finalRating = "D";
   if (coupon < 5) {
     finalRating = ratings[0];
@@ -35,16 +39,17 @@ router.post('/', function(req, res, next) {
     finalRating = ratings[index];
   }
 
-  var agencies = ['联合资信评估有限公司', '中诚信国际信用评级', '大公国际资信评估有限公司', '联合资信盛屯矿业集团股份有限公司'];
+  var agencies = ['No. 1', 'Bank womens and children', 'tumor', 'Cancer hospital', 'mental hospital'];
   var agency = agencies[getRandomInt(0,3)];
-  pool.query(insert_bond, [req.body.issuer, finalRating, req.body.maturity_date, coupon, agency, 'bank'], function(err, data) {
+  pool.query(insert_bond, [req.body.issuer, finalRating, req.body.maturity_date, coupon, agency, 'hospital'], function(err, data) {
     if (err) {
       //res.status(404).send();
       console.log(err)
     } else {
       setTimeout(() => {
-        res.redirect("investors/bank");
-      }, 3000);
+        console.log(1);
+        res.redirect("/hetong/");
+      }, 0);
     }
   });
 })

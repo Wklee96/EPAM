@@ -14,7 +14,7 @@ var investorsRouter = require('./routes/investors');
 var requestRouter = require('./routes/request');
 var entertainentRouter = require('./routes/sportsandentertainment');
 var ygRouter = require('./routes/ygentertainment')
-
+var hetongRouter = require('./routes/hetong'); 
 var app = express();
 
 // view engine setup
@@ -30,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // use router
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/hetong', hetongRouter)
 app.use('/investors', investorsRouter);
 app.use('/request', requestRouter);
 app.use('/sportsandentertainment',entertainentRouter);
